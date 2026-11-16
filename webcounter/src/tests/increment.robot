@@ -14,3 +14,10 @@ When button pressed twice the counter is two
     Click  button >> text=Paina
     Click  button >> text=Paina
     Get Text  body  *=  nappia painettu 2 kertaa
+
+*** Test Cases ***
+Counter can be set to a chosen value
+    Go To    ${HOME_URL}
+    Fill Text    input[name="value"]    10
+    Click    text=Set counter
+    Get Text    body    *=    nappia painettu 10 kertaa
